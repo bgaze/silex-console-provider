@@ -11,11 +11,13 @@ use Symfony\Component\Console\Command\Command as BaseCommand;
  */
 abstract class AbstractCommand extends BaseCommand {
 
-    protected $app;
-
-    public function __construct() {
-        /* @var $app SilexApplication */
-        $this->app = $this->getApplication()->getSilexApplication();
+    /**
+     * Returns main Silex application in which console service is registered
+     * 
+     * @return Application
+     */
+    public function getSilexApplication() {
+        return $this->getApplication()->getSilexApplication();
     }
 
 }

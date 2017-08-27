@@ -2,12 +2,11 @@
 
 namespace Bgaze\Silex\Provider;
 
-use Bgaze\Silex\Console\Application as ConsoleApplication;
-use Bgaze\Silex\Console\Helper\DescriptorHelper;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
+use Bgaze\Silex\Console\Application as ConsoleApplication;
 
 /**
  * ConsoleServiceProvider

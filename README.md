@@ -44,6 +44,7 @@ Here is a custom command example :
 
     namespace MyApp\Command;
 
+    use Symfony\Component\Console\Input\InputArgument;
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Input\InputOption;
     use Symfony\Component\Console\Output\OutputInterface;
@@ -55,16 +56,26 @@ Here is a custom command example :
             if (!isset($this->app['my_value'])) {
                 return false;
             }
-
+            
             return parent::isEnabled();
         }
 
         protected function configure() {
-            $this->setName('my:command')->setDescription('This is a demo command ...');
+            $this
+                    ->setName('my:command')
+                    ->setDefinition([
+                        new InputArgument('foo', InputArgument::REQUIRED, 'A required argument'),
+                        new InputOption('bar', 'b', InputOption::VALUE_REQUIRED, 'An option with default value', 'Bar!')
+                    ])
+                    ->setDescription('This is a demo command ...');
         }
 
         protected function execute(InputInterface $input, OutputInterface $output) {
-            $output->writeln($this->app['my_value']);
+            $foo = $input->getArgument('foo');
+            $output->writeln('Foo : ' . $foo);
+
+            $bar = $input->getOption('bar');
+            $output->writeln('Bar : ' . $bar);
         }
 
     }

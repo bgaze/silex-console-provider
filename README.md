@@ -5,7 +5,7 @@ Provides for Silex :
 * a handy way to create custom console commands. 
 * clear cache command : `$ php bin/console cache:clear`.
 
-Please check [Console component documentation][1] for more details about how to use console and build commands.
+Please check [Console component documentation](http://symfony.com/doc/current/components/console/introduction.html) for more details about how to use console and build commands.
 
 ## Installation
 
@@ -94,7 +94,9 @@ class MyCommand extends AbstractCommand {
 
 ## Credits
 
-This provider is heavily inspired from [codito/silex-console-provider][2]
+This provider is heavily inspired from [codito/silex-console-provider](https://github.com/CoditoNet/silex-console-provider)
 
-[1]: http://symfony.com/doc/current/components/console/introduction.html
-[2]: https://github.com/CoditoNet/silex-console-provider
+## More stuff
+
+* [Pre-configured skeleton for the Silex microframework](https://github.com/bgaze/silex-skeleton)
+* [Silex service provider for Symfony finder component](https://github.com/bgaze/silex-finder-provider)

@@ -52,7 +52,7 @@ Here is a custom command example :
     class MyCommand extends AbstractCommand {
 
         public function isEnabled() {
-            if (isset(!$this->app['my_value'])) {
+            if (!isset($this->app['my_value'])) {
                 return false;
             }
 

@@ -11,7 +11,7 @@ Please check [Console component documentation][1] for more details about how to 
 
 Import the provider with Composer:
 
-    $ composer require bgaze/silex-console-provider ~1.0
+    $ composer require bgaze/silex-console-provider dev-master
 
 Clear cache commands requires cache path to be defined under `cache_dir` key :
 

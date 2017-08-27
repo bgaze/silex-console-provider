@@ -15,17 +15,13 @@ Import the provider with Composer:
 
 Clear cache commands requires cache path to be defined under `cache_dir` key :
 
-    ```php
     $app['cache_dir'] = __DIR__ . '/../var/cache';
-    ```
 
 Then register it in your app :
 
-    ```php
     use Bgaze\Silex\Provider\ConsoleServiceProvider;
     $app->register(new ConsoleServiceProvider(), ['console.name' => 'My Application', 'console.version' => 'n/a']);
     $app['console']->add(new \Bgaze\Silex\Console\Command\ClearCacheCommand());
-    ```
 
 ## Usage
 
@@ -44,7 +40,6 @@ This base class provide acces to the current Silex application under `$app` prot
 
 Here is a custom command example :
 
-    ```php
     <?php
 
     namespace MyApp\Command;
@@ -73,7 +68,6 @@ Here is a custom command example :
         }
 
     }
-    ```
 
 ## Credits
 

@@ -73,12 +73,12 @@ class MyCommand extends AbstractCommand {
 
     protected function configure() {
         $this
-                ->setName('my:command')
-                ->setDefinition([
-                    new InputArgument('foo', InputArgument::REQUIRED, 'A required argument'),
-                    new InputOption('bar', 'b', InputOption::VALUE_REQUIRED, 'An option with default value', 'Bar!')
-                ])
-                ->setDescription('This is a demo command ...');
+            ->setName('my:command')
+            ->setDefinition([
+                new InputArgument('foo', InputArgument::REQUIRED, 'A required argument'),
+                new InputOption('bar', 'b', InputOption::VALUE_REQUIRED, 'An option with default value', 'Bar!')
+            ])
+            ->setDescription('This is a demo command ...');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {

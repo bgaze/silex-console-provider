@@ -18,7 +18,7 @@ $ composer require bgaze/silex-console-provider dev-master
 Clear cache commands requires cache path to be defined under `cache_dir` key :
 
 ```php
-    $app['cache_dir'] = __DIR__ . '/../var/cache';
+$app['cache_dir'] = __DIR__ . '/../var/cache';
 ```
 
 Then register it in your app :
